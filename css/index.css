@@ -1,0 +1,67 @@
+  html {
+    height: 100%;
+  }
+
+  body {
+    background-image: url("../img/background1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #cccccc;
+    height: 100%;
+    overflow: hidden;
+
+    display: flow-root;
+  }
+
+  table {
+    text-align: left;
+    margin: 0 auto;
+    padding: 0 auto;
+    font-family: "Courier New";
+    font-size: 30px;
+    margin-top: 50px;
+  }
+
+  th {
+    font-size: 40px;
+    text-align: center;
+    color: white;
+  }
+
+  input {
+    width: 100%;
+    font-size: 20px;
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: black;
+    background-color: rgba(0, 0, 0, 0);
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  img {
+    width: 40px;
+    height: 40px;
+  }
+
+  div {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 30%;
+    text-align: center;
+    padding: 15px;
+    color: black;
+    cursor: pointer;
+    width: 50px;
+    margin:0 auto;
+    margin-bottom: 17px;
+    margin-top: 7px;
+  }
+
+  div:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+
+  .titulo {
+    font-size: 25px;
+    text-align: center;
+  }
