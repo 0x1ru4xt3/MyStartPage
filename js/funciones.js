@@ -1,11 +1,43 @@
+var leiho = window.innerWidth;
+var panta = window.screen.width;
+var aldak = 0;
+
+if (leiho <= panta*0.9){
+    console.log('CSSa > erdia.css');
+    cssa('erdia.css');
+    aldak = 1;
+} else {
+    console.log('CSSa > osoa.css');
+    cssa('osoa.css');
+    aldak = 1;
+}
+
+if(window.attachEvent) {
+    window.attachEvent('onresize', function() {
+        alert('attachEvent - resize');
+    });
+} else if(window.addEventListener) {
+    window.addEventListener('resize', function() {
+        console.log('addEventListener - resize');
+
+        if (window.innerWidth <= panta*0.9){
+            console.log('CSSa > erdia.css');
+            cssa('erdia.css');
+        } else {
+            console.log('CSSa > osoa.css');
+            cssa('osoa.css');
+        }
+    }, true);
+}
+
 function borrarTxt() {
   var x = document.getElementsByName("txtSearch");
-  if(x[0].value == "Search...") x[0].value = "";
+  if(x[0].value == "Bilatu...") x[0].value = "";
 }
 
 function fueraFoc(){
   var x = document.getElementsByName("txtSearch");
-  if(!x[0].value) x[0].value = "Search...";
+  if(!x[0].value) x[0].value = "Bilatu...";
 }
 
 function buscarDDG(e) {
@@ -26,18 +58,6 @@ function buscarDDG(e) {
 
     window.location = busk;
     return true;
-  }
-}
-
-function cargarHTML() {
-  var body = document.body,
-      html = document.documentElement;
-
-  var width = Math.max( body.scrollWidth, body.offsetWidth,
-                       html.clientWidth, html.scrollWidth, html.offsetWidth );
-
-  if (width > 940) {
-  } else {
   }
 }
 
@@ -71,5 +91,22 @@ function getFecha(){
       break;
     default:
   }
-  document.write(fecha.getFullYear() + "ko " + hila + "k " + fecha.getDate());
+  document.write(fecha.getFullYear() + "eko " + hila + "k " + fecha.getDate());
+}
+
+function cssa(artx) {
+    var head = document.getElementsByTagName('HEAD')[0];
+
+    if(aldak){
+        var azkenCss = document.getElementById('nirezesese');
+        azkenCss.remove();
+    }
+
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = 'css/' + artx;
+    link.id = 'nirezesese'
+
+    head.appendChild(link);
 }

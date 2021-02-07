@@ -3,23 +3,19 @@
 <head>
   <meta charset="utf-8">
   <title>Start Page</title>
-  <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="shortcut icon" href="ico/bomb.png" type="image/x-icon" />
   <script src="js/funciones.js"></script>
 </head>
-<body onload="cargarHTML();">
+<body>
   <table>
     <tr>
       <th colspan="12"><script>getFecha();</script></th>
     </tr>
     <tr>
-      <td colspan="2" style="text-align: center;">
-        <img src="https://img.icons8.com/material/50/000000/duckduckgo.png"/>
+      <td colspan="12">
+          <input type="text" name="txtSearch" value="Bilatu..." onfocus="borrarTxt()" onfocusout="fueraFoc()" onkeypress="return buscarDDG(event)" >
       </td>
-      <td colspan="9" class="search" style="padding-bottom: 30px; text-align: center;">
-        <input type="text" name="txtSearch" value="Search..." onfocus="borrarTxt()" onfocusout="fueraFoc()" onkeypress="return buscarDDG(event)" >
-      </td>
-      <td colspan="1"></td>
     </tr>
 
     <tr>
@@ -27,18 +23,18 @@
     </tr>
     <tr>
       <td colspan="4">
-        <div onclick="window.location='https://egela.ehu.eus'">
-          <i class='fa fa-graduation-cap'></i>
+        <div class='ezk' onclick="window.location='https://egela.ehu.eus'">
+          <i class='fa fa-graduation-cap'><span class='izenak'>eGela</span></i>
         </div>
       </td>
       <td colspan="4">
         <div onclick="window.location='https://www.ehu.eus/es/web/informatika-fakultatea'">
-          <i class='fa fa-university'></i>
+          <i class='fa fa-university'><span class='izenak'>Fakultatea</span></i>
         </div>
       </td>
       <td colspan="4">
         <div onclick="window.location='https://webposta.ehu.eus'">
-          <i class='fa fa-envelope'></i>
+          <i class='fa fa-envelope'><span class='izenak'>webPosta</span></i>
         </div>
       </td>
     </tr>
@@ -46,14 +42,14 @@
       <th class="titulo" colspan="12">Informatika</th>
     </tr>
     <tr>
-      <td colspan="6" style="padding-left: 70px;">
-        <div onclick="window.location='https://github.com/'">
-          <i class='fa fa-github'></i>
+      <td colspan="6">
+        <div class='ezk' onclick="window.location='https://github.com/'">
+          <i class='fa fa-github'><span class='izenak'>GitHub</span></i>
         </div>
       </td>
-      <td colspan="6" style="padding-right: 70px;">
+      <td colspan="6">
         <div onclick="window.location='https://stackoverflow.com/'">
-          <i class='fa fa-stack-overflow'></i>
+          <i class='fa fa-stack-overflow'><span class='izenak'>StackOverflow</span></i>
         </div>
       </td>
     </tr>
@@ -63,22 +59,22 @@
     <tr>
       <td colspan="3">
         <div onclick="window.location='https://twitter.com/home'">
-          <i class='fa fa-twitter'></i>
+          <i class='fa fa-twitter'><span class='izenak'>Twitter</span></i>
         </div>
       </td>
       <td colspan="3">
         <div onclick="window.location='https://www.youtube.com/'">
-          <i class='fa fa-youtube-play'></i>
+          <i class='fa fa-youtube-play'><span class='izenak'>YouTube</span></i>
         </div>
       </td>
       <td colspan="3">
         <div onclick="window.location='https://open.spotify.com/'">
-          <i class='fa fa-spotify'></i>
+          <i class='fa fa-spotify'><span class='izenak'>Spotify</span></i>
         </div>
       </td>
       <td colspan="3">
         <div onclick="window.location='https://www.reddit.com/'">
-          <i class='fa fa-reddit'></i>
+          <i class='fa fa-reddit'><span class='izenak'>Reddit</span></i>
         </div>
       </td>
     </tr>
