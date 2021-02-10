@@ -15,7 +15,7 @@
     padding: 0 auto;
     font-size: 30px;
     margin-top: 50px;
-    font-family: "Courier New";
+    font-family: "Lucida Console", "Courier New", monospace;
   }
 
   th {
@@ -55,6 +55,8 @@
 
   .izenak {
       font-size: 30px;
+      margin-left: 12px;
+      font-family: "Lucida Console", "Courier New", monospace;
       visibility: visible;
   }
 
